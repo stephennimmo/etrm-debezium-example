@@ -1,0 +1,17 @@
+{
+  "name": "etrm-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "plugin.name": "pgoutput",
+    "database.server.name": "etrm",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "admin",
+    "database.password": "password",
+    "database.dbname" : "etrm",
+    "provide.transaction.metadata": true,
+    "topic.prefix": "etrm",
+    "topic.transaction": "transaction",
+    "table.include.list": "public.trade_header,public.trade_leg"
+  }
+}
